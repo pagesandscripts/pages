@@ -7,12 +7,21 @@
   text-align: right;
 }
 
-[dir="rtl"] .breadcrumb {
+[dir="rtl"] .hero-overlay {
+  background: linear-gradient(240deg, rgba(15, 23, 42, 0.85) 30%, transparent 70%);
+}
+
+[dir="rtl"] .language-switch {
   flex-direction: row-reverse;
 }
 
-[dir="rtl"] .breadcrumb a {
-  color: inherit;
+[dir="rtl"] .story-column,
+[dir="rtl"] .story-links a {
+  text-align: right;
+}
+
+[dir="rtl"] .breadcrumb {
+  flex-direction: row-reverse;
 }
 
 [dir="rtl"] .story-meta-list {
@@ -21,10 +30,6 @@
 
 [dir="rtl"] .story-nav {
   flex-direction: row-reverse;
-}
-
-[dir="rtl"] .story-nav-link {
-  text-align: right;
 }
 
 [dir="rtl"] .dual-list {

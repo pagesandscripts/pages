@@ -126,10 +126,10 @@ main {
 
 .dual-list {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   max-width: var(--max-width);
   margin: 0 auto;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .story-collection {
