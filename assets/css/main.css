@@ -2,15 +2,15 @@
 
 
 :root {
-  --background: #0f172a;
-  --surface: #111c34;
-  --surface-soft: rgba(15, 23, 42, 0.6);
-  --accent: #f97316;
-  --accent-dark: #d25d0c;
-  --text: #f8fafc;
-  --text-muted: #cbd5f5;
-  --link: #38bdf8;
-  --outline: rgba(56, 189, 248, 0.35);
+  --background: #fefdfE;
+  --surface: #f6f4f5;
+  --surface-soft: rgba(195, 192, 192, 0.45);
+  --accent: #413b41;
+  --accent-dark: #514c4f;
+  --text: #131117;
+  --text-muted: #797575;
+  --link: #514c4f;
+  --outline: #c3c0c0;
   --max-width: 68rem;
 }
 
@@ -103,7 +103,7 @@ a:hover {
   padding: 0.65rem 1.4rem;
   border-radius: 999px;
   background: var(--accent);
-  color: var(--text);
+  color: var(--background);
   font-weight: 600;
   transition: background 150ms ease, transform 150ms ease;
 }
@@ -135,7 +135,7 @@ main {
   background: var(--surface);
   border-radius: 1.25rem;
   padding: 2rem;
-  border: 1px solid rgba(56, 189, 248, 0.15);
+  border: 1px solid var(--outline);
   display: grid;
   gap: 1.5rem;
 }
@@ -155,8 +155,8 @@ main {
   gap: 0.35rem;
   padding: 1rem 1.25rem;
   border-radius: 1rem;
-  background: rgba(15, 23, 42, 0.55);
-  border: 1px solid transparent;
+  background: rgba(81, 76, 79, 0.07);
+  border: 1px solid rgba(81, 76, 79, 0.14);
   transition: border 150ms ease, transform 150ms ease;
 }
 
@@ -248,7 +248,7 @@ main {
 }
 
 .story-nav-disabled {
-  color: rgba(148, 163, 184, 0.5);
+  color: rgba(121, 117, 117, 0.55);
   cursor: not-allowed;
 }
 
