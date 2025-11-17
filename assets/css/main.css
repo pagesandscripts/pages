@@ -50,18 +50,17 @@ a:hover {
 
 .hero {
   position: relative;
-  display: grid;
-  gap: 0;
   max-width: var(--max-width);
   margin: 0 auto;
   border-radius: 1.5rem;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.6));
+  height: 50vh;
+  min-height: 320px;
   border: 1px solid var(--outline);
 }
 
 .hero-media {
-  grid-area: 1 / 1 / 2 / 2;
+  height: 100%;
 }
 
 .hero-media img {
@@ -69,36 +68,30 @@ a:hover {
   height: 100%;
   object-fit: cover;
   border-radius: 0;
-  opacity: 0.72;
 }
 
-.hero-overlay {
-  grid-area: 1 / 1 / 2 / 2;
+.hero-details {
+  max-width: var(--max-width);
+  margin: 1.75rem auto 0;
+  padding: 0 1.5rem;
   display: grid;
-  gap: 1rem;
-  align-content: center;
-  padding: clamp(2.5rem, 8vw, 4rem);
-  background: linear-gradient(120deg, rgba(15, 23, 42, 0.85) 30%, transparent 70%);
+  gap: 0.75rem;
+  text-align: center;
 }
 
-.eyebrow {
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  color: var(--text-muted);
-}
-
-.hero h1 {
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
-  font-weight: 700;
+.hero-title {
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  font-weight: 600;
 }
 
 .hero-description {
-  max-width: 32rem;
+  max-width: 36rem;
+  justify-self: center;
   color: var(--text-muted);
 }
 
 .language-switch {
+  justify-content: center;
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
