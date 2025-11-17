@@ -1,0 +1,32 @@
+:root[dir="rtl"] {
+  font-family: "Vazirmatn", "IRANSans", "Tahoma", "Segoe UI", sans-serif;
+}
+
+[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .breadcrumb {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .breadcrumb a {
+  color: inherit;
+}
+
+[dir="rtl"] .story-meta-list {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .story-nav {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .story-nav-link {
+  text-align: right;
+}
+
+[dir="rtl"] .dual-list {
+  direction: rtl;
+}
