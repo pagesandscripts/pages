@@ -54,7 +54,7 @@ a:hover {
   margin: 0;
   border-radius: 0;
   border-bottom: 1px solid var(--outline);
-  background: var(--surface);
+  background: #fff;
   padding: 1.25rem 0 1.5rem;
 }
 
