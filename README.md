@@ -37,10 +37,9 @@ pages/
 │   └── index-template.html
 │
 ├── tools/                      ← Build scripts
-│   ├── build_stories.py        ← Main build command (Python)
+│   ├── build_stories.py        ← Main build command
 │   ├── generate_stories.py     ← Story page generator
-│   ├── generate_index.py       ← Index page generator
-│   └── *.ps1                   ← Legacy PowerShell scripts
+│   └── generate_index.py       ← Index page generator
 │
 └── documentation/              ← Detailed guides
     ├── HOW_IT_WORKS.md         ← Start here!
