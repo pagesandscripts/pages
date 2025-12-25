@@ -1,0 +1,38 @@
+﻿{
+    "stories":  [
+                    {
+                        "en":  {
+                                   "readingTime":  "6 min",
+                                   "title":  "Lady Prince",
+                                   "content":  "\u003cp\u003eThe court liked naming people more than listening to them. So when the firstborn daughter stepped into the hall wearing a suit of paper armor, the scribes dipped their quills and wrote \u003cem\u003ePrince\u003c/em\u003e before she could say a word.\u003c/p\u003e\n\n    \u003cp\u003eShe kept the title, but not the armor. The paper only held up for three breaths against the rain and the dragons everyone swore had gone extinct. Still, it was enough time to make eye contact with the creature clinging to the parapet and promise they would both leave the mountain alive.\u003c/p\u003e\n\n    \u003cp\u003eLegends claim she slew the beast. The truth is quieter: she listened to the dragon describe the ache in its wings, the chasm between what it wanted and the role it was assigned. They traded names, traded expectations, and burned the court records together.\u003c/p\u003e\n\n    \u003cp\u003eWhen she returned, a soot stain across her cheek and a dragon shadow gliding overhead, the heralds stammered between \u003cem\u003elady\u003c/em\u003e and \u003cem\u003eprince\u003c/em\u003e. She let them argue. Her kingdom had already started rewriting itself.\u003c/p\u003e",
+                                   "genre":  "Fantasy",
+                                   "subtitle":  "A fairy-tale vignette about courage that refuses to fit a title."
+                               },
+                        "slug":  "lady-prince",
+                        "fa":  {
+                                   "readingTime":  "۶ دقیقه",
+                                   "title":  "شاهزاده خانم",
+                                   "content":  "\u003cp\u003eدربار بیش از آن‌که شنونده باشد عاشق نام‌گذاری بود. پس وقتی دختر نخستین با زرهی از کاغذ وارد تالار شد، دبیران قلم‌ها را در مرکب زدند و پیش از آن‌که لب باز کند، واژهٔ «شاهزاده» را در کنار نامش نوشتند.\u003c/p\u003e\n\n    \u003cp\u003eاو لقب را نگه داشت اما زره را نه. زرهٔ کاغذی تنها سه نفس در برابر باران و اژدهایی که همه می‌گفتند نسلش منقرض شده دوام آورد. همین سه نفس کافی بود تا با موجودی که به دیوارهٔ قلعه چنگ زده بود هم‌چشم شود و قول بدهد هر دو از کوه زنده پایین بیایند.\u003c/p\u003e\n\n    \u003cp\u003eافسانه‌ها می‌گویند اژدها را کشت. حقیقت آرام‌تر است: به درد بال‌های اژدها گوش داد، به فاصله‌ای که میان خواسته و نقشی که به او تحمیل شده بود افتاده بود. نام‌ها را عوض کردند، انتظارها را آتش زدند و دفترهای دیوانی را با هم سوزاندند.\u003c/p\u003e\n\n    \u003cp\u003eوقتی برگشت، لکه‌ای از دوده بر گونه و سایهٔ اژدهایی در آسمان، نقالان بین «شاهزاده» و «خانم» گیر کرده بودند. او گذاشت بحث کنند. پادشاهی‌اش از پیش شروع به بازنویسی خود کرده بود.\u003c/p\u003e",
+                                   "genre":  "فانتزی",
+                                   "subtitle":  "روایتی کوتاه از شجاعتی که در چارچوب لقب‌ها جای نمی‌گیرد."
+                               }
+                    },
+                    {
+                        "en":  {
+                                   "readingTime":  "Add time",
+                                   "title":  "The Trial",
+                                   "content":  "\u003cp\u003eAdd your story content here...\u003c/p\u003e\n\n    \u003cp\u003eWrite paragraphs separated by blank lines.\u003c/p\u003e\n\n    \u003cp\u003eUse \u003cem\u003eitalics\u003c/em\u003e for emphasis.\u003c/p\u003e",
+                                   "genre":  "Add genre",
+                                   "subtitle":  "Add your subtitle here."
+                               },
+                        "slug":  "the-trial",
+                        "fa":  {
+                                   "readingTime":  "زمان مطالعه",
+                                   "title":  "محاکمه",
+                                   "content":  "\u003cp\u003eمتن داستان را اینجا بنویسید...\u003c/p\u003e\n\n    \u003cp\u003eپاراگراف‌ها را با یک خط خالی از هم جدا کنید.\u003c/p\u003e\n\n    \u003cp\u003eاز \u003cem\u003eایتالیک\u003c/em\u003e برای تأکید استفاده کنید.\u003c/p\u003e",
+                                   "genre":  "ژانر داستان",
+                                   "subtitle":  "زیرعنوان داستان را اینجا بنویسید."
+                               }
+                    }
+                ]
+}

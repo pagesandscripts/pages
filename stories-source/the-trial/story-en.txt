@@ -1,0 +1,12 @@
+---
+title: The Trial
+subtitle: Add your subtitle here.
+genre: Add genre
+reading-time: Add time
+---
+
+Add your story content here...
+
+Write paragraphs separated by blank lines.
+
+Use *italics* for emphasis.

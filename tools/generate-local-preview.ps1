@@ -5,9 +5,10 @@ param(
 
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repoRoot = Resolve-Path (Join-Path $scriptDir "..")
+$docsRoot = Join-Path $repoRoot "docs"
 
-$sourcePath = Join-Path $repoRoot $Source
-$targetPath = Join-Path $repoRoot $Target
+$sourcePath = Join-Path $docsRoot $Source
+$targetPath = Join-Path $docsRoot $Target
 
 if (-not (Test-Path $sourcePath)) {
     Write-Error "Source file '$Source' was not found at '$sourcePath'."

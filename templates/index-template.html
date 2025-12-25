@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bilingual short stories by pagesandscripts, presented in English and Persian." />
+  <title>Pages &amp; Scripts · Bilingual Short Stories</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="landing-header">
+    <div class="hero" role="banner">
+      <div class="hero-media">
+        <img src="assets/images/cover/cover_black_cloud.png" alt="Watercolor illustration of a black cloud formation" loading="eager">
+      </div>
+    </div>
+    <div class="hero-details" lang="fa" dir="rtl">
+      <h1 class="hero-title">سیاهی</h1>
+    </div>
+  </header>
+
+  <main>
+    <section id="stories" class="story-index" aria-label="Story collections by language">
+      <div class="story-index__column story-index__column--en">
+        <ul class="story-index__list">
+{{EN_STORY_LIST}}
+        </ul>
+      </div>
+
+      <div class="story-index__column story-index__column--fa" lang="fa" dir="rtl">
+        <ul class="story-index__list">
+{{FA_STORY_LIST}}
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>There is no right to be reserved.</p>
+  </footer>
+</body>
+</html>

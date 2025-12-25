@@ -1,21 +1,88 @@
-# pagesandscripts.github.io
+# Pages & Scripts - Bilingual Short Stories
 
-Static short story site served via GitHub Pages. The landing page showcases bilingual content: a hero illustration followed by dual story lists (English and Persian) so visitors can drop straight into either language.
+Static bilingual story site served via GitHub Pages. Simple workflow: write stories in `.txt` files, run one command, and your entire website is generated.
 
-## Structure
+## Quick Start
 
-- `index.html` – Root landing page with hero image and side-by-side English/Persian story lists (stacks on mobile).
-- `en/index.html` / `fa/index.html` – Optional deeper landing pages for each language if you want longer descriptions.
-- `assets/css/` – Shared styling (`main.css`) plus RTL overrides (`rtl.css`) loaded by Persian pages.
-- `assets/images/` – Global art (subfolders for `cover/`, `shared/`, and optional per-language imagery under `en/` and `fa/`).
-- `assets/fonts/` – Custom typefaces grouped by language as needed.
-- `en/stories/<slug>/` and `fa/stories/<slug>/` – Paired story folders. Each contains `index.html`, optional `custom.css`, and a local `images/` directory. Keep slugs identical across languages so cross-links stay predictable.
+1. **Add a story:** Create folder in `stories-source/` with `story-en.txt` and `story-fa.txt`
+2. **Build:** Run `.\tools\build-stories.ps1`
+3. **View:** Open `docs\index.html` in browser
 
-Copy the `en/stories/story-template/` and `fa/stories/story-template/` folders when drafting new stories. Update both language versions together so the landing page lists stay in sync.
+That's it! All pages, navigation, and styling are auto-generated.
 
-## Authoring notes
+## Project Structure
 
-- Keep every HTML or CSS file under ~400 lines for readability; split large pages into partials or shared assets if needed.
-- Reference the shared cover art (`assets/images/cover/watercolor_black_horse.avif`) from the landing page hero.
-- Add “Read in English/Persian” cross-links between translated stories to help readers switch languages mid-story.
-- Generate a local preview of the landing page with `powershell -File tools/generate-local-preview.ps1`; this writes `local-preview.html` (ignored by git) for quick browser inspection.
+```
+pages/
+├── README.md                   ← You are here
+├── .gitignore
+│
+├── docs/                       ← Website output (GitHub Pages serves this)
+│   ├── assets/                 ← CSS, images, fonts
+│   ├── en/                     ← English story pages
+│   ├── fa/                     ← Persian story pages
+│   └── index.html              ← Landing page
+│
+├── stories-source/             ← Your .txt story files
+│   ├── lady-prince/
+│   │   ├── story-en.txt
+│   │   └── story-fa.txt
+│   └── ...
+│
+├── templates/                  ← Design templates
+│   ├── story-en.html
+│   ├── story-fa.html
+│   └── index-template.html
+│
+├── tools/                      ← Build scripts
+│   └── build-stories.ps1       ← Main build command
+│
+└── documentation/              ← Detailed guides
+    ├── HOW_IT_WORKS.md         ← Start here!
+    ├── SIMPLE_WORKFLOW.md      ← Complete workflow guide
+    └── STRUCTURE.md            ← Project organization
+```
+
+## Documentation
+
+- **[HOW_IT_WORKS.md](documentation/HOW_IT_WORKS.md)** - Overview and quick examples
+- **[SIMPLE_WORKFLOW.md](documentation/SIMPLE_WORKFLOW.md)** - Complete workflow guide
+- **[STRUCTURE.md](documentation/STRUCTURE.md)** - Project organization details
+
+## Story Format
+
+Each story uses a simple text format with metadata:
+
+```
+---
+title: Story Title
+subtitle: Brief description
+genre: Fantasy
+reading-time: 5 min
+---
+
+Your story content here.
+
+Each paragraph separated by blank lines.
+
+Use *asterisks* for italics.
+```
+
+## Commands
+
+```powershell
+# Build all stories and generate website
+.\tools\build-stories.ps1
+
+# Preview locally
+start docs\index.html
+```
+
+## Benefits
+
+✅ Write in simple .txt files  
+✅ One command builds everything  
+✅ Change design once, update all stories  
+✅ Auto-generated navigation  
+✅ Bilingual support built-in  
+✅ GitHub Pages ready  

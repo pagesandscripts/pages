@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}} · Pages &amp; Scripts</title>
+  <meta name="description" content="{{TITLE}} — a short story by pagesandscripts presented in English.">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body class="story-page">
+  <header class="story-header">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../../index.html">Home</a>
+      <span aria-hidden="true">/</span>
+      <span>{{TITLE}}</span>
+    </nav>
+    <h1>{{TITLE}}</h1>
+    <p class="story-subtitle">{{SUBTITLE}}</p>
+    <ul class="story-meta-list">
+      <li>Genre: {{GENRE}}</li>
+      <li>Reading time: {{READING_TIME}}</li>
+      <li>Translation: <a href="../../fa/stories/{{SLUG}}/index.html" lang="fa" dir="rtl">{{FA_TITLE}}</a></li>
+    </ul>
+  </header>
+
+  <main class="story-content" id="story">
+    {{CONTENT}}
+  </main>
+
+  <footer class="story-footer">
+    <nav class="story-nav" aria-label="Story navigation">
+      {{PREV_LINK}}
+      <a class="story-nav-link" href="../../index.html">Back to landing page</a>
+      <a class="story-nav-link" href="../../fa/stories/{{SLUG}}/index.html" lang="fa" dir="rtl">مطالعه به فارسی</a>
+      {{NEXT_LINK}}
+    </nav>
+  </footer>
+</body>
+</html>
