@@ -18,3 +18,4 @@ v1.25.0: improved story page typography with centered title, 65ch max-width, jus
 v1.26.0: fixed story page CSS asset paths; centered header/breadcrumb; set story width to 60ch and removed story content background
 v1.27.0: aligned story header to 60ch reading column; forced transparent story background; improved text justification (hyphenation + inter-word)
 v1.28.0: interleaved EN/FA story titles on mobile while keeping left/right alignment; preserved two-column layout on larger screens
+v1.29.0: updated Persian version of lady-prince story
