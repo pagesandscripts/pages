@@ -78,6 +78,36 @@ Use *asterisks* for italics.
 start docs\index.html
 ```
 
+## Publish to GitHub Pages
+
+**One-time setup:** In GitHub repository settings → Pages → set source to `main` branch `/docs` folder
+
+**Quick one-liner (recommended):**
+
+```powershell
+.\tools\build-stories.ps1; git add .; git checkout -b v1.17.0; git commit -m "Your change description"; git push -u origin v1.17.0; git checkout main; git merge v1.17.0; git push origin main
+```
+
+This command: builds → creates feature branch → commits → pushes branch → merges to main → deploys
+
+**Or step-by-step:**
+
+```powershell
+# 1. Build and commit to feature branch
+.\tools\build-stories.ps1
+git add .
+git checkout -b v1.17.0
+git commit -m "Your changes"
+git push -u origin v1.17.0
+
+# 2. Merge to main to deploy
+git checkout main
+git merge v1.17.0
+git push origin main
+```
+
+GitHub Pages will automatically deploy from `main/docs` within ~1 minute.
+
 ## Benefits
 
 ✅ Write in simple .txt files  
