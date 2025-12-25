@@ -1,0 +1,15 @@
+# Git Push Logs
+
+This file tracks all version deployments to GitHub Pages.
+
+## Command Template
+
+```powershell
+git add .; git checkout -b v1.20.0; git commit -m "your change description"; git push -u origin v1.20.0; git checkout main; git merge v1.20.0; git push origin main
+```
+
+## Version History
+
+v1.21.0: removed language-specific index pages (en/index.html and fa/index.html) and simplified story metadata to only include title
+v1.18.0: added - before story names in the main page
+v1.15.0: adding structure to the website for future stories to have the same template for each subpage
