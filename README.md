@@ -5,10 +5,12 @@ Static bilingual story site served via GitHub Pages. Simple workflow: write stor
 ## Quick Start
 
 1. **Add a story:** Create folder in `stories-source/` with `story-en.txt` and `story-fa.txt`
-2. **Build:** Run `.\tools\build-stories.ps1`
+2. **Build:** Run `python tools\build_stories.py`
 3. **View:** Open `docs\index.html` in browser
 
 That's it! All pages, navigation, and styling are auto-generated.
+
+> **Note:** Python 3 is required for proper UTF-8 encoding of Persian text.
 
 ## Project Structure
 
@@ -35,7 +37,10 @@ pages/
 │   └── index-template.html
 │
 ├── tools/                      ← Build scripts
-│   └── build-stories.ps1       ← Main build command
+│   ├── build_stories.py        ← Main build command (Python)
+│   ├── generate_stories.py     ← Story page generator
+│   ├── generate_index.py       ← Index page generator
+│   └── *.ps1                   ← Legacy PowerShell scripts
 │
 └── documentation/              ← Detailed guides
     ├── HOW_IT_WORKS.md         ← Start here!
@@ -72,7 +77,11 @@ Use *asterisks* for italics.
 
 ```powershell
 # Build all stories and generate website
-.\tools\build-stories.ps1
+python tools\build_stories.py
+
+# Or use individual generators
+python tools\generate_stories.py   # Generate story pages only
+python tools\generate_index.py     # Generate index page only
 
 # Preview locally
 start docs\index.html
@@ -81,11 +90,7 @@ start docs\index.html
 ## Publish to GitHub Pages
 
 **One-time setup:** In GitHub repository settings → Pages → set source to `main` branch `/docs` folder
-
-**Quick one-liner (recommended):**
-
-```powershell
-.\tools\build-stories.ps1; git add .; git checkout -b v1.19.0; git commit -m "fix: resolve UTF-8 encoding issue causing Persian title corruption"; git push -u origin v1.19.0; git checkout main; git merge v1.19.0; git push origin main
+python tools\build_stories.py; git add .; git checkout -b v1.20.0; git commit -m "your change description"; git push -u origin v1.20.0; git checkout main; git merge v1.20.0; git push origin main
 ```
 
 This command: builds → creates feature branch → commits → pushes branch → merges to main → deploys
@@ -94,11 +99,15 @@ This command: builds → creates feature branch → commits → pushes branch �
 
 ```powershell
 # 1. Build and commit to feature branch
-.\tools\build-stories.ps1
+python tools\build_stories.py
 git add .
-git checkout -b v1.17.0
+git checkout -b v1.20.0
 git commit -m "Your changes"
-git push -u origin v1.17.0
+git push -u origin v1.20.0
+
+# 2. Merge to main to deploy
+git checkout main
+git merge v1.20gin v1.17.0
 
 # 2. Merge to main to deploy
 git checkout main
