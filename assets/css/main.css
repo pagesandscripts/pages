@@ -147,7 +147,7 @@ main {
 
 .story-index__list a:hover {
   color: var(--accent-dark);
-  border-bottom-color: var(--accent-dark);
+  text-decoration: none;
 }
 
 .story-index__column--fa .story-index__list a {
