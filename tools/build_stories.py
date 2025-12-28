@@ -55,23 +55,37 @@ def main():
     print("Building Stories & Generating Pages")
     print("=" * 60)
     
-    # Find all story directories
-    story_dirs = [d for d in source_dir.iterdir() if d.is_dir() and d.name != '__pycache__']
-    
-    if not story_dirs:
-        print("No story directories found in stories-source/")
-        return 1
-    
-    print(f"\nFound {len(story_dirs)} story directories")
-    
-    stories = []
-    
-    for story_dir in sorted(story_dirs):
-        slug = story_dir.name
-        
-        # Skip template
-        if slug == 'story-template':
+    # Find story directories (recursively): a story dir is any folder that contains
+    # both English and Persian files (story-en.* and story-fa.*).
+    candidates = []
+    for story_dir in source_dir.rglob('*'):
+        if not story_dir.is_dir():
             continue
+        if story_dir.name == '__pycache__':
+            continue
+        if any(part == 'story-template' for part in story_dir.parts):
+            continue
+
+        en_md = story_dir / 'story-en.md'
+        fa_md = story_dir / 'story-fa.md'
+        en_txt = story_dir / 'story-en.txt'
+        fa_txt = story_dir / 'story-fa.txt'
+
+        if (en_md.exists() or en_txt.exists()) and (fa_md.exists() or fa_txt.exists()):
+            # slug is relative folder name; if nested, join path parts with '-'
+            rel = story_dir.relative_to(source_dir)
+            slug = '-'.join(rel.parts)
+            candidates.append((slug, story_dir))
+
+    if not candidates:
+        print("No story directories found in stories-source/ (expected story-en + story-fa files)")
+        return 1
+
+    print(f"\nFound {len(candidates)} story directories")
+
+    stories = []
+
+    for slug, story_dir in sorted(candidates, key=lambda x: x[0]):
         
         print(f"\nProcessing: {slug}")
         
@@ -86,11 +100,11 @@ def main():
             fa_file = story_dir / "story-fa.txt"
         
         if not en_file.exists():
-            print(f"  Warning: Missing story-en.txt, skipping...")
+            print("  Warning: Missing English file (story-en.md or story-en.txt), skipping...")
             continue
         
         if not fa_file.exists():
-            print(f"  Warning: Missing story-fa.txt, skipping...")
+            print("  Warning: Missing Persian file (story-fa.md or story-fa.txt), skipping...")
             continue
         
         try:
