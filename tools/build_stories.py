@@ -75,8 +75,15 @@ def main():
         
         print(f"\nProcessing: {slug}")
         
-        en_file = story_dir / "story-en.txt"
-        fa_file = story_dir / "story-fa.txt"
+        en_file = story_dir / "story-en.md"
+        fa_file = story_dir / "story-fa.md"
+        
+        # Fallback to .txt if .md doesn't exist (for backward compatibility)
+        if not en_file.exists() and (story_dir / "story-en.txt").exists():
+            en_file = story_dir / "story-en.txt"
+        
+        if not fa_file.exists() and (story_dir / "story-fa.txt").exists():
+            fa_file = story_dir / "story-fa.txt"
         
         if not en_file.exists():
             print(f"  Warning: Missing story-en.txt, skipping...")
